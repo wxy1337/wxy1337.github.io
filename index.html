@@ -137,6 +137,43 @@
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
+			<a href="/2023/11/25/HTB-Zipping/" >HTB: Zipping</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2023-11-25  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/../images/image-20231125192400721.png" alt="image-20231125192400721"></p>
+<p>IP:10.10.11.229</p>
+<p>nmap结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Nmap 7.92 scan initiated Sat Nov 25 06:21:37 2023 as: nmap -sC -sV --min-rate 10000 -oN nmap 10.10.11.229</span></span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.10.11.229</span><br><span class="line">Host is up (0.42s latency).</span><br><span class="line">Not shown: 998 closed tcp ports (reset)</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 9.0p1 Ubuntu 1ubuntu7.3 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   256 9d:6e:ec:02:2d:0f:6a:38:60:c6:aa:ac:1e:e0:c2:84 (ECDSA)</span><br><span class="line">|_  256 eb:95:11:c7:a6:fa:ad:74:ab:a2:c5:f6:a4:02:18:41 (ED25519)</span><br><span class="line">80/tcp open  http    Apache httpd 2.4.54 ((Ubuntu))</span><br><span class="line">|_http-title: Zipping | Watch store</span><br><span class="line">|_http-server-header: Apache/2.4.54 (Ubuntu)</span><br><span class="line">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line"><span class="comment"># Nmap done at Sat Nov 25 06:22:01 2023 -- 1 IP address (1 host up) scanned in 24.12 seconds</span></span><br></pre></td></tr></table></figure>
+
+<p>WORK WITH US界面存在上传功能</p>
+<p><img src="/../images/image-20231125192759468.png" alt="image-20231125192759468"></p>
+<p>从描述中可以看出，上传的文件必须是pdf经过zip压缩后的压缩文件</p>
+<p>测试文件</p>
+<p><img src="/../images/image-20231125193542574.png" alt="image-20231125193542574"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~/htb/Zipping]</span><br><span class="line">└─$ 7z -l test.zip</span><br><span class="line"></span><br><span class="line">7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21</span><br><span class="line">p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,32 CPUs AMD Ryzen 5 5600X 6-Core Processor              (A20F10),ASM,AES-NI)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Command Line Error:</span><br><span class="line">Unsupported <span class="built_in">command</span>:</span><br><span class="line">test.zip</span><br><span class="line">                                                                                                                                                                                                                  </span><br><span class="line">┌──(kali㉿kali)-[~/htb/Zipping]</span><br><span class="line">└─$ 7z l test.zip </span><br><span class="line"></span><br><span class="line">7-Zip [64] 16.02 : Copyright (c) 1999-2016 Igor Pavlov : 2016-05-21</span><br><span class="line">p7zip Version 16.02 (locale=en_US.UTF-8,Utf16=on,HugeFiles=on,64 bits,32 CPUs AMD Ryzen 5 5600X 6-Core Processor              (A20F10),ASM,AES-NI)</span><br><span class="line"></span><br><span class="line">Scanning the drive <span class="keyword">for</span> archives:</span><br><span class="line">1 file, 198 bytes (1 KiB)</span><br><span class="line"></span><br><span class="line">Listing archive: test.zip</span><br><span class="line"></span><br><span class="line">--</span><br><span class="line">Path = test.zip</span><br><span class="line">Type = zip</span><br><span class="line">Physical Size = 198</span><br><span class="line"></span><br><span class="line">   Date      Time    Attr         Size   Compressed  Name</span><br><span class="line">------------------- ----- ------------ ------------  ------------------------</span><br><span class="line">2023-09-02 05:10:18 .....           32           32  test.pdf</span><br><span class="line">------------------- ----- ------------ ------------  ------------------------</span><br><span class="line">2023-09-02 05:10:18                 32           32  1 files</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/11/25/HTB-Zipping/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
 			<a href="/2023/11/21/HTB-Analytics/" >HTB: Analytics</a>
 		</h3>
 		</div>
@@ -374,9 +411,9 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/Machines/Lab/">Lab<span>4</span></a></li>
+			<li><a href="/categories/Machines/Lab/">Lab<span>5</span></a></li>
 		
-			<li><a href="/categories/Machines/">Machines<span>4</span></a></li>
+			<li><a href="/categories/Machines/">Machines<span>5</span></a></li>
 		
 			<li><a href="/categories/hexo/">hexo<span>1</span></a></li>
 		
@@ -397,15 +434,17 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
-			<li><a href="/tags/test3/">test3<span>1</span></a></li>
-		
-			<li><a href="/tags/HTB/">HTB<span>4</span></a></li>
-		
-			<li><a href="/tags/test1-test2/">test1,test2<span>1</span></a></li>
-		
 			<li><a href="/tags/easy/">easy<span>4</span></a></li>
 		
 			<li><a href="/tags/pictures/">pictures<span>1</span></a></li>
+		
+			<li><a href="/tags/medium/">medium<span>1</span></a></li>
+		
+			<li><a href="/tags/test1-test2/">test1,test2<span>1</span></a></li>
+		
+			<li><a href="/tags/test3/">test3<span>1</span></a></li>
+		
+			<li><a href="/tags/HTB/">HTB<span>5</span></a></li>
 		
 		 
 		</ul>
@@ -417,6 +456,10 @@
 <div class="widget">
   <h4>Recent Posts</h4>
   <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2023/11/25/HTB-Zipping/" ><i class="fa fa-file-o"></i>HTB: Zipping</a>
+      </li>
     
       <li>
         <a href="/2023/11/21/HTB-Analytics/" ><i class="fa fa-file-o"></i>HTB: Analytics</a>
@@ -432,10 +475,6 @@
     
       <li>
         <a href="/2023/11/18/HTB-CozyHosting/" ><i class="fa fa-file-o"></i>HTB: CozyHosting</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/16/pictures/" ><i class="fa fa-file-o"></i>pictures</a>
       </li>
     
   </ul>
