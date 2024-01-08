@@ -137,11 +137,11 @@
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
-			<a href="/2023/12/01/HTB-Clicker/" >HTB: Clicker</a>
+			<a href="/2024/01/08/HTB-Bizness/" >HTB: Bizness</a>
 		</h3>
 		</div>
 	<div class="col-md-4">
-		<div class="date">post @ 2023-12-01  </div>
+		<div class="date">post @ 2024-01-08  </div>
 		</div>
 	</div>
 	
@@ -151,16 +151,21 @@
   <div class="row">
 	
 	
-		<p><img src="/../images/image-20231201211009257.png" alt="image-20231201211009257"></p>
-<p>nmap结果</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~/htb/Clicker]</span><br><span class="line">└─$ nmap -sC -sV --min-rate 10000 10.10.11.232 -oN nmap</span><br><span class="line">Starting Nmap 7.92 ( https://nmap.org ) at 2023-12-01 08:05 EST</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.10.11.232</span><br><span class="line">Host is up (0.24s latency).</span><br><span class="line">Not shown: 900 filtered tcp ports (no-response), 97 closed tcp ports (conn-refused)</span><br><span class="line">PORT    STATE SERVICE VERSION</span><br><span class="line">22/tcp  open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   256 89:d7:39:34:58:a0:ea:a1:db:c1:3d:14:ec:5d:5a:92 (ECDSA)</span><br><span class="line">|_  256 b4:da:8d:af:65:9c:bb:f0:71:d5:13:50:ed:d8:11:30 (ED25519)</span><br><span class="line">80/tcp  open  http    Apache httpd 2.4.52 ((Ubuntu))</span><br><span class="line">|_http-title: Did not follow redirect to http://clicker.htb/</span><br><span class="line">|_http-server-header: Apache/2.4.52 (Ubuntu)</span><br><span class="line">111/tcp open  rpcbind 2-4 (RPC <span class="comment">#100000)</span></span><br><span class="line">| rpcinfo: </span><br><span class="line">|   program version    port/proto  service</span><br><span class="line">|   100000  2,3,4        111/tcp   rpcbind</span><br><span class="line">|   100000  2,3,4        111/udp   rpcbind</span><br><span class="line">|   100000  3,4          111/tcp6  rpcbind</span><br><span class="line">|   100000  3,4          111/udp6  rpcbind</span><br><span class="line">|   100003  3,4         2049/tcp   nfs</span><br><span class="line">|   100003  3,4         2049/tcp6  nfs</span><br><span class="line">|   100005  1,2,3      37372/udp6  mountd</span><br><span class="line">|   100005  1,2,3      43175/tcp6  mountd</span><br><span class="line">|   100005  1,2,3      53971/udp   mountd</span><br><span class="line">|   100005  1,2,3      59491/tcp   mountd</span><br><span class="line">|   100021  1,3,4      35100/udp6  nlockmgr</span><br><span class="line">|   100021  1,3,4      43437/tcp   nlockmgr</span><br><span class="line">|   100021  1,3,4      44001/tcp6  nlockmgr</span><br><span class="line">|   100021  1,3,4      44254/udp   nlockmgr</span><br><span class="line">|   100024  1          32974/udp   status</span><br><span class="line">|   100024  1          52719/tcp   status</span><br><span class="line">|   100024  1          54995/udp6  status</span><br><span class="line">|   100024  1          58087/tcp6  status</span><br><span class="line">|   100227  3           2049/tcp   nfs_acl</span><br><span class="line">|_  100227  3           2049/tcp6  nfs_acl</span><br><span class="line">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 30.01 seconds</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+		<p><img src="/../images/image-20240108222232805.png" alt="image-20240108222232805"></p>
+<p>ip&#x3D;&#x3D;10.10.11.252</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">┌──(root㉿kali)-[/home/kali/htb/Ouija]</span><br><span class="line">└─# echo &quot;10.10.11.252 bizness.htb&quot; &gt;&gt; /etc/hosts</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../images/image-20231201211053807.png" alt="image-20231201211053807"></p>
-<p><img src="/../images/image-20231201211113011.png" alt="image-20231201211113011"></p>
+<p><img src="/../images/image-20240108222342479.png" alt="image-20240108222342479"></p>
+<p><img src="/../images/image-20240108223228038.png" alt="image-20240108223228038"></p>
+<p>dirsearch后发现login</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/control/login</span><br></pre></td></tr></table></figure>
 
+<p><img src="/../images/image-20240108225029785.png" alt="image-20240108225029785"></p>
+<p><img src="/../images/image-20240108230028631.png" alt="image-20240108230028631"></p>
+<p><img src="/../images/image-20240108230043066.png" alt="image-20240108230043066"></p>
 	
 	</div>
-  <a type="button" href="/2023/12/01/HTB-Clicker/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2024/01/08/HTB-Bizness/#more" class="btn btn-default more">Read More</a>
 </div>
 
 		
@@ -170,11 +175,11 @@
 <div class="row">
 	<div class="col-md-8">
 		<h3 class="title">
-			<a href="/2023/11/30/HTB-Devvortex/" >HTB: Devvortex</a>
+			<a href="/2023/11/26/HTB-Fortress-Jet/" >HTB: Fortress-Jet</a>
 		</h3>
 		</div>
 	<div class="col-md-4">
-		<div class="date">post @ 2023-11-30  </div>
+		<div class="date">post @ 2023-11-26  </div>
 		</div>
 	</div>
 	
@@ -184,21 +189,54 @@
   <div class="row">
 	
 	
-		<p><img src="/../images/image-20231130162325396.png" alt="image-20231130162325396"></p>
-<p>nmap结果：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Nmap 7.92 scan initiated Thu Nov 30 03:17:04 2023 as: nmap -sC -sV --min-rate 10000 -oN nmap 10.10.11.242</span></span><br><span class="line">Nmap scan report <span class="keyword">for</span> 10.10.11.242</span><br><span class="line">Host is up (0.26s latency).</span><br><span class="line">Not shown: 946 filtered tcp ports (no-response), 52 closed tcp ports (conn-refused)</span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)</span><br><span class="line">| ssh-hostkey: </span><br><span class="line">|   3072 48:ad:d5:b8:3a:9f:bc:be:f7:e8:20:1e:f6:bf:de:ae (RSA)</span><br><span class="line">|   256 b7:89:6c:0b:20:ed:49:b2:c1:86:7c:29:92:74:1c:1f (ECDSA)</span><br><span class="line">|_  256 18:<span class="built_in">cd</span>:9d:08:a6:21:a8:b8:b6:f7:9f:8d:40:51:54:fb (ED25519)</span><br><span class="line">80/tcp open  http    nginx 1.18.0 (Ubuntu)</span><br><span class="line">|_http-server-header: nginx/1.18.0 (Ubuntu)</span><br><span class="line">|_http-title: Did not follow redirect to http://devvortex.htb/</span><br><span class="line">Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line"><span class="comment"># Nmap done at Thu Nov 30 03:17:33 2023 -- 1 IP address (1 host up) scanned in 29.02 seconds</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+		<p><img src="/../images/image-20231126120749601.png" alt="image-20231126120749601"></p>
+<p>introduction：</p>
+<p><img src="/../images/image-20231126120811415.png" alt="image-20231126120811415"></p>
+<p><img src="/../images/image-20231126120837350.png" alt="image-20231126120837350"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JET&#123;s4n1ty_ch3ck&#125;</span><br></pre></td></tr></table></figure>
 
-<p>将域名加入hosts文件,访问页面</p>
-<p><img src="/../images/image-20231130162232688.png" alt="image-20231130162232688"></p>
-<p>gobuster枚举子域名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gobuster vhost -u http://devvortex.htb -w /usr/share/SecLists-master/Discovery/Web-Content/raft-medium-directories-lowercase.txt --append-domain -o gobuster</span><br></pre></td></tr></table></figure>
+<p><img src="/../images/image-20231126120916668.png" alt="image-20231126120916668"></p>
 
-<p><img src="/../images/image-20231130162917947.png" alt="image-20231130162917947"></p>
-<p>访问dev.devvortex.htb</p>
-<p><img src="/../images/image-20231130163111904.png" alt="image-20231130163111904"></p>
 	
 	</div>
-  <a type="button" href="/2023/11/30/HTB-Devvortex/#more" class="btn btn-default more">Read More</a>
+  <a type="button" href="/2023/11/26/HTB-Fortress-Jet/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2023/11/26/HTB-M0rsarchive/" >HTB: M0rsarchive</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2023-11-26  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p><img src="/../images/image-20231126114024182.png" alt="image-20231126114024182"></p>
+<p>描述：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CHALLENGE DESCRIPTION</span><br><span class="line">Just unzip the archive ... several times ...</span><br></pre></td></tr></table></figure>
+
+<p><img src="/../images/image-20231126114010340.png" alt="image-20231126114010340"></p>
+<p>看出要解压1000次</p>
+<p>png文件为每次的解压密码 摩斯电码：9</p>
+<p><img src="/../images/image-20231126114258969.png" alt="image-20231126114258969"></p>
+<p><img src="/../images/image-20231126114347857.png" alt="image-20231126114347857"></p>
+<p>编写ex.py </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">import re</span><br><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line">import zipfile</span><br><span class="line">from PIL import Image</span><br><span class="line"></span><br><span class="line">#根据摩斯密码表查值</span><br><span class="line">def get_pass(morse_list):</span><br><span class="line">    password = &quot;&quot;</span><br><span class="line">    MORSE_CODE_DICT = &#123;&#x27;.-&#x27;: &#x27;a&#x27;, &#x27;-...&#x27;: &#x27;b&#x27;, &#x27;-.-.&#x27;: &#x27;c&#x27;, &#x27;-..&#x27;: &#x27;d&#x27;,&#x27;.&#x27;: &#x27;e&#x27;, &#x27;..-.&#x27;: &#x27;f&#x27;, &#x27;--.&#x27;: &#x27;g&#x27;, &#x27;....&#x27;: &#x27;h&#x27;,&#x27;..&#x27;: &#x27;i&#x27;, &#x27;.---&#x27;: &#x27;j&#x27;, &#x27;-.-&#x27;: &#x27;k&#x27;, &#x27;.-..&#x27;: &#x27;l&#x27;,&#x27;--&#x27;: &#x27;m&#x27;, &#x27;-.&#x27;: &#x27;n&#x27;, &#x27;---&#x27;: &#x27;o&#x27;, &#x27;.--.&#x27;: &#x27;p&#x27;,&#x27;--.-&#x27;: &#x27;q&#x27;, &#x27;.-.&#x27;: &#x27;r&#x27;, &#x27;...&#x27;: &#x27;s&#x27;, &#x27;-&#x27;: &#x27;t&#x27;,&#x27;..-&#x27;: &#x27;u&#x27;, &#x27;...-&#x27;: &#x27;v&#x27;, &#x27;.--&#x27;: &#x27;w&#x27;, &#x27;-..-&#x27;: &#x27;x&#x27;,&#x27;-.--&#x27;: &#x27;y&#x27;, &#x27;--..&#x27;: &#x27;z&#x27;, &#x27;-----&#x27;: &#x27;0&#x27;, &#x27;.----&#x27;: &#x27;1&#x27;,&#x27;..---&#x27;: &#x27;2&#x27;, &#x27;...--&#x27;: &#x27;3&#x27;, &#x27;....-&#x27;: &#x27;4&#x27;, &#x27;.....&#x27;: &#x27;5&#x27;,&#x27;-....&#x27;: &#x27;6&#x27;, &#x27;--...&#x27;: &#x27;7&#x27;, &#x27;---..&#x27;: &#x27;8&#x27;, &#x27;----.&#x27;: &#x27;9&#x27;,&#x27;-..-.&#x27;: &#x27;/&#x27;, &#x27;.-.-.-&#x27;: &#x27;.&#x27;, &#x27;-.--.-&#x27;: &#x27;)&#x27;, &#x27;..--..&#x27;: &#x27;?&#x27;,&#x27;-.--.&#x27;: &#x27;(&#x27;, &#x27;-....-&#x27;: &#x27;-&#x27;, &#x27;--..--&#x27;: &#x27;,&#x27;&#125;</span><br><span class="line">    for morse in morse_list:</span><br><span class="line">        password += MORSE_CODE_DICT.get(morse)</span><br><span class="line">    return password</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#从图片中读取摩斯密码</span><br><span class="line">def get_morse():</span><br><span class="line">    fp = open(&#x27;./pwd.png&#x27;, &#x27;rb&#x27;)</span><br><span class="line">    image = Image.open(fp)</span><br><span class="line">    pixel = list(image.getdata())</span><br><span class="line">    background = pixel[0]</span><br><span class="line">    chars = []</span><br><span class="line">    for i,v in enumerate(pixel):</span><br><span class="line">        if v == background:</span><br><span class="line">                chars.append(&quot; &quot;)</span><br><span class="line">        else:</span><br><span class="line">                chars.append(&quot;*&quot;)</span><br><span class="line">    output =  &quot;&quot;.join(chars)</span><br><span class="line">    &quot;&quot;&quot;正则匹配测试建议：https://regex101.com/</span><br><span class="line">    ^  : asserts position at start of a line</span><br><span class="line">    $  : asserts position at the end of a line</span><br><span class="line">    \s : matches any whitespace character (equivalent to [\r\n\t\f\v ])</span><br><span class="line">    *  : matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)</span><br><span class="line">    \* : matches the character *</span><br><span class="line">    &#123;3&#125;: matches the previous token exactly 3 times</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    output = re.sub(r&#x27;^\s*&#x27;, &#x27;&#x27;, output)   #匹配开头的任意个空白字符，并替换为空</span><br><span class="line">    output = re.sub(r&#x27;\s*$&#x27;, &#x27;&#x27;, output)   #匹配结尾的任意个空白字符，并替换为空</span><br><span class="line">    output = re.sub(r&#x27;\*&#123;3&#125;&#x27;, &#x27;-&#x27;, output) #匹配3个*号，并替换为字符&quot;-&quot;</span><br><span class="line">    output = re.sub(r&#x27;\*&#x27;, &#x27;.&#x27;, output)    #匹配单个*号，并替换为字符&quot;.&quot;</span><br><span class="line">    output = re.sub(r&#x27;\s&#123;2,&#125;&#x27;, &#x27; | &#x27;, output)  #(用于处理多行摩斯密码的情况)匹配两个以上空白字符，如果存在，就替换为&quot;|&quot;</span><br><span class="line">    output = re.sub(r&#x27;\s&#x27;, &#x27;&#x27;, output)     #匹配空白字符，并替换为空</span><br><span class="line">    output = output.split(&#x27;|&#x27;)</span><br><span class="line">    fp.close()</span><br><span class="line">    return output</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#指定密码解压压缩包</span><br><span class="line">def unzip_file(path, number, password):</span><br><span class="line">    zip_path = &quot;flag_&quot; + str(1000-number) + &quot;.zip&quot;</span><br><span class="line">    fp = zipfile.ZipFile(zip_path)</span><br><span class="line">    for file in fp.namelist():</span><br><span class="line">        fp.extract(file,&quot;./&quot;,pwd=password.encode(&quot;utf-8&quot;))</span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def main():</span><br><span class="line">    path = sys.path[0]            #当前脚本的运行目录</span><br><span class="line">    </span><br><span class="line">    for number in range(1,1001):</span><br><span class="line">        print(&quot;Processing the &quot;+ str(number) + &quot;th archive.&quot;)</span><br><span class="line">        #print(os.listdir(&#x27;.&#x27;))   #显示当前目录下的所有文件</span><br><span class="line">        morse_list = get_morse()</span><br><span class="line">        password = get_pass(morse_list)</span><br><span class="line">        unzip_file(path, number, password)</span><br><span class="line">        path = &quot;./flag&quot;</span><br><span class="line">        os.chdir(path)       #切换当前工作目录(进入flag子目录)</span><br><span class="line">    </span><br><span class="line">    fp = open(&#x27;./flag&#x27;, &#x27;r&#x27;)</span><br><span class="line">    flag = fp.readlines()</span><br><span class="line">    print(flag)</span><br><span class="line">    fp.close()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    main()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+	
+	</div>
+  <a type="button" href="/2023/11/26/HTB-M0rsarchive/#more" class="btn btn-default more">Read More</a>
 </div>
 
 		
@@ -482,11 +520,19 @@
 		<h4>Categories</h4>
 		<ul class="tag_box inline list-unstyled">
 		
-			<li><a href="/categories/Machines/Lab/">Lab<span>7</span></a></li>
+			<li><a href="/categories/Fortress/Advanced-Labs/">Advanced Labs<span>1</span></a></li>
 		
-			<li><a href="/categories/Machines/">Machines<span>7</span></a></li>
+			<li><a href="/categories/Misc/Challenges/">Challenges<span>1</span></a></li>
 		
-			<li><a href="/categories/Machines/Lab/Open-Season-Beta-III/">Open Season Beta III<span>1</span></a></li>
+			<li><a href="/categories/Fortress/">Fortress<span>1</span></a></li>
+		
+			<li><a href="/categories/Machines/Lab/">Lab<span>6</span></a></li>
+		
+			<li><a href="/categories/Machines/">Machines<span>6</span></a></li>
+		
+			<li><a href="/categories/Misc/">Misc<span>1</span></a></li>
+		
+			<li><a href="/categories/Machines/Lab/Open-Season-Beta-III/">Open Season Beta III<span>0</span></a></li>
 		
 			<li><a href="/categories/hexo/">hexo<span>1</span></a></li>
 		
@@ -507,17 +553,19 @@
 		<h4>Tag Cloud</h4>
 		<ul class="tag_box inline list-unstyled">		
 		
+			<li><a href="/tags/medium/">medium<span>1</span></a></li>
+		
+			<li><a href="/tags/season4/">season4<span>1</span></a></li>
+		
 			<li><a href="/tags/pictures/">pictures<span>1</span></a></li>
 		
-			<li><a href="/tags/HTB/">HTB<span>7</span></a></li>
+			<li><a href="/tags/HTB/">HTB<span>8</span></a></li>
 		
-			<li><a href="/tags/easy/">easy<span>5</span></a></li>
-		
-			<li><a href="/tags/test1-test2/">test1,test2<span>1</span></a></li>
+			<li><a href="/tags/easy/">easy<span>6</span></a></li>
 		
 			<li><a href="/tags/test3/">test3<span>1</span></a></li>
 		
-			<li><a href="/tags/medium/">medium<span>2</span></a></li>
+			<li><a href="/tags/test1-test2/">test1,test2<span>1</span></a></li>
 		
 		 
 		</ul>
@@ -531,11 +579,15 @@
   <ul class="entry list-unstyled">
     
       <li>
-        <a href="/2023/12/01/HTB-Clicker/" ><i class="fa fa-file-o"></i>HTB: Clicker</a>
+        <a href="/2024/01/08/HTB-Bizness/" ><i class="fa fa-file-o"></i>HTB: Bizness</a>
       </li>
     
       <li>
-        <a href="/2023/11/30/HTB-Devvortex/" ><i class="fa fa-file-o"></i>HTB: Devvortex</a>
+        <a href="/2023/11/26/HTB-Fortress-Jet/" ><i class="fa fa-file-o"></i>HTB: Fortress-Jet</a>
+      </li>
+    
+      <li>
+        <a href="/2023/11/26/HTB-M0rsarchive/" ><i class="fa fa-file-o"></i>HTB: M0rsarchive</a>
       </li>
     
       <li>
@@ -544,10 +596,6 @@
     
       <li>
         <a href="/2023/11/21/HTB-Analytics/" ><i class="fa fa-file-o"></i>HTB: Analytics</a>
-      </li>
-    
-      <li>
-        <a href="/2023/11/20/HTB-Codify/" ><i class="fa fa-file-o"></i>HTB:Codify</a>
       </li>
     
   </ul>
